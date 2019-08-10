@@ -56,9 +56,15 @@ li {
 }
 
 .popular-rank {
+    display: flex;
+    justify-content: center;
     margin: 10px;
     font-weight: bold;
     color: #1a1a1a;
+}
+
+.popular-rank h3 {
+    margin: 0;
 }
 
 .nav {
