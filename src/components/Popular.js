@@ -28,32 +28,34 @@ SelectLanguage.propTypes = {
 
 const RepoInfos = props =>
     <table>
-        <tr>
-            <td><Octicon icon={Person}/></td>
-            <td>{props.repo.owner.login}</td>
-        </tr>
-        <tr>
-            <td><Octicon icon={Star}/></td>
-            <td>{props.repo.stargazers_count}</td>
-        </tr>
-        <tr>
-            <td><Octicon icon={RepoForked}/></td>
-            <td>{props.repo.forks_count}</td>
-        </tr>
-        <tr>
-            <td><Octicon icon={Eye}/></td>
-            <td>{props.repo.watchers_count}</td>
-        </tr>
-        <tr>
-            <td><Octicon icon={IssueOpened}/></td>
-            <td>{props.repo.open_issues_count}</td>
-        </tr>
-        {props.repo.license && (
+        <tbody>
+    		<tr>
+	            <td><Octicon icon={Person}/></td>
+	            <td>{props.repo.owner.login}</td>
+	        </tr>
+	        <tr>
+	            <td><Octicon icon={Star}/></td>
+	            <td>{props.repo.stargazers_count}</td>
+	        </tr>
+	        <tr>
+	            <td><Octicon icon={RepoForked}/></td>
+	            <td>{props.repo.forks_count}</td>
+	        </tr>
+	        <tr>
+	            <td><Octicon icon={Eye}/></td>
+	            <td>{props.repo.watchers_count}</td>
+	        </tr>
+	        <tr>
+	            <td><Octicon icon={IssueOpened}/></td>
+	            <td>{props.repo.open_issues_count}</td>
+	        </tr>
+	        {props.repo.license && (
             <tr>
                 <td><Octicon icon={Law}/></td>
                 <td>{props.repo.license.name}</td>
             </tr>
-        )}
+        	)}
+        </tbody>
     </table>
 ;
 
